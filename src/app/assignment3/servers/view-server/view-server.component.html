@@ -1,0 +1,8 @@
+<p>view-server works!</p>
+
+<button class="btn btn-success" (click)="viewServer()">View Server</button>
+<button class="btn btn-info" [routerLink]="['/viewserver',1,'edit']" 
+[queryParams]="{allowEdit:2!==2?'12':'0'}"
+ [fragment]="'Loding'">Click here</button>
+
+<router-outlet></router-outlet>

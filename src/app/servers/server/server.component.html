@@ -1,0 +1,29 @@
+<div class="container">
+  <p class="h11">Add new servers or blueprints!</p>
+  <app-cockpit (cockServerData)="addServer($event)" 
+  (bpData)="addServerBluePrint($event)">
+  <h1>Hello supriya </h1>
+  <p>i am from guntur </p>
+</app-cockpit>
+
+</div>
+<hr>
+
+<div class="container">
+ <div class="row"> 
+   <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onchangesFirst()">Changes first</button>
+    <app-server-element
+     *ngFor="let Element of serverElements"
+     [singleElement]="Element"
+     [name]="Element.name"
+     >
+     <p>
+      <strong *ngIf="Element.type === 'server'" style="color: red">{{Element.content}}</strong>
+      <em *ngIf="Element.type === 'blueprint'" style="color: blue">{{Element.content}}</em>
+    </p>
+  </app-server-element>
+  </div>
+</div> 
+</div>
+

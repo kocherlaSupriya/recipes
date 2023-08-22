@@ -1,0 +1,19 @@
+<a
+  class="list-group-item clearfix" 
+  [routerLink]="[index]" 
+  routerLinkActive="active"
+     class="list-group-item clearfix "
+ >
+    <div class="pull-left" >
+      <h4 class="list-group-item-heading">{{ p.name }}</h4>
+      <p class="list-group-item-text">{{ p.description }}</p>
+    </div>
+    <span class="pull-right">
+      <img
+      [src]="p.image"
+        alt="img"
+        class="img-responsive"
+        style="max-height: 50px"
+      />
+    </span>
+  </a>

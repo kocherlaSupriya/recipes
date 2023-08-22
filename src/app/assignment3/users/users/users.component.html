@@ -1,0 +1,6 @@
+<p>users works!</p>
+<div *ngFor="let u of users">
+{{u.name}}
+
+<button class="btn btn-primary" (click)="viewUser(u.id)">View user</button>
+</div>
